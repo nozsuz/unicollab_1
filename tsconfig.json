@@ -5,7 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,7 +18,13 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["src/types", "node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "pdfjs-dist/legacy/build/pdf": ["node_modules/pdfjs-dist/legacy/build/pdf"],
+      "pdfjs-dist/legacy/build/pdf.worker.entry": ["node_modules/pdfjs-dist/legacy/build/pdf.worker.entry"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
